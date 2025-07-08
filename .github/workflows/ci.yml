@@ -7,7 +7,7 @@ name: CI/CD Pipeline
 #   workflow_dispatch:
 
 # On every push
-# on: [push]
+on: [push]
 
 # On push or pull request to master branch
 # on:
@@ -17,9 +17,9 @@ name: CI/CD Pipeline
 #     branches: [master]
 
 # Scheduled run every minute (for testing; adjust as needed)
-on:
-  schedule:
-    - cron: '*/1 * * * *'
+# on:
+#   schedule:
+#     - cron: '1 * * * *'
 
 jobs:
   build:
