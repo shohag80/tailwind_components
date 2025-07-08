@@ -14,3 +14,4 @@ jobs:
       - name: Install Dependencies
         run: |
           echo "Hello World!"
+          npm i
