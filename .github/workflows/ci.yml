@@ -1,10 +1,23 @@
 name: CI/CD Pipeline
 
+# event run manualy
+# on:
+#   workflow_dispatch:
+
+# just push event
+# on: [push]
+
+# branch wise pull-push event
+# on:
+#   push:
+#     branches: [master]
+#   pull_request:
+#     branches: [master]
+
+# schedule event
 on:
-  push:
-    branches: [master]
-  pull_request:
-    branches: [master]
+  schedule:
+    - cron: "*/1 * * * *"
 
 jobs:
   build:
@@ -13,5 +26,4 @@ jobs:
     steps:
       - name: Install Dependencies
         run: |
-          echo "Hello World!"
-          npm i
+          echo "Hello! I'm cron"
