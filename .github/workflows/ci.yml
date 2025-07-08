@@ -1,23 +1,25 @@
 name: CI/CD Pipeline
 
-# event run manualy
+# Uncomment the desired trigger event(s) below:
+
+# Manual trigger
 # on:
 #   workflow_dispatch:
 
-# just push event
+# On every push
 # on: [push]
 
-# branch wise pull-push event
+# On push or pull request to master branch
 # on:
 #   push:
 #     branches: [master]
 #   pull_request:
 #     branches: [master]
 
-# schedule event
+# Scheduled run every minute (for testing; adjust as needed)
 on:
   schedule:
-    - cron: "*/1 * * * *"
+    - cron: '*/1 * * * *'
 
 jobs:
   build:
@@ -26,4 +28,4 @@ jobs:
     steps:
       - name: Install Dependencies
         run: |
-          echo "Hello! I'm cron"
+          echo "Hello! I'm cron again..."
