@@ -28,4 +28,4 @@ jobs:
     steps:
       - name: Install Dependencies
         run: |
-          echo "Hello! I'm cron again..."
+          echo "Hello world!"
